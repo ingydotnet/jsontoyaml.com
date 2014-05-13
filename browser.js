@@ -9,14 +9,14 @@ jQuery(function () {
   $events.on('click', '.js-convert', function () {
     var json = $('.js-json').val()
       , data
-      , yml
+      , yaml
       ;
 
     try {
       data = JSON.parse(json);
     } catch(e) {
       console.log(e);
-      $('.js-yml').val(
+      $('.js-yaml').val(
         e.message
       + '\n\n'
       +  e.toString()
@@ -26,8 +26,8 @@ jQuery(function () {
       return;
     }
 
-    yml = YAML.stringify(data);
-    $('.js-yml').val(yml);
+    yaml = YAML.stringify(data);
+    $('.js-yaml').val(yaml);
   });
 
 });

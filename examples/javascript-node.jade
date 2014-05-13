@@ -8,14 +8,14 @@
         var YAML = require('json2yaml')
           , json
           , data
-          , yml
+          , yaml
           ;
 
         json = '{ "foo": "bar" }';
         data = JSON.parse(json);
-        yml = YAML.stringify(data);
+        yaml = YAML.stringify(data);
 
-        console.log(yml);
+        console.log(yaml);
       }());
 
     ul
